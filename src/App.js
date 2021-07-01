@@ -10,10 +10,11 @@ function App() {
   const [selectedYear, setSelectedYear] = useState(
     new Date().getFullYear().toString()
   );
-  const [newExpense, setNewExpense] = useState('');
+  const [newExpense, setNewExpense] = useState([]);
   const newExpenseHandler = (newExpenseData) => {
-    setNewExpense(newExpenseData);
-    //console.log(newExpenseData.itemTitle);
+    //setNewExpense(newExpenseData);
+    setNewExpense( prevState => [...prevState, newExpenseData]);
+    console.log(newExpense);
   };
   const yearFilterHandler = (yearFromFilter) => {
     setSelectedYear(yearFromFilter);

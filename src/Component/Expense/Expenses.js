@@ -31,7 +31,7 @@ function Expenses(props) {
       //props.addNewExpense,
     ];
   }
- console.log(updatedExpense);
+// console.log(updatedExpense);
   return updatedExpense.map((element) => {
     if (props.year == element.Date.getFullYear()) {
       return (

@@ -13,20 +13,24 @@ function Expenses(props) {
     { Id: "e6", Item: "Television", price: "45", Date: new Date(2021, 18, 9) },
     { Id: "e7", Item: "Fan", price: "10", Date: new Date(2021, 4, 10) },
   ];
- 
-  return Expenses.map((element) => {
-    if (props.year == element.Date.getFullYear()) {
-      return (
-        <div key={element.Id}>
-          <ExpenseData
-            itemName={element.Item}
-            price={element.price}
-            date={element.Date}
-          />
-        </div>
-      );
-    } else return null;
-  });
+
+  return (
+    <div>
+      {Expenses.map((element) => (
+        //console.log(props.year);
+        // if (props.year == element.Date.getFullYear()) {
+        //console.log(props.year);
+        <ExpenseData
+          key={element.Id}
+          itemName={element.Item}
+          price={element.price}
+          date={element.Date}
+        />
+      ))}
+    </div>
+  );
+
+  //} else return null;
 }
 
 export default Expenses;

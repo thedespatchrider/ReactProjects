@@ -1,7 +1,6 @@
 import ExpenseData from "./ExpenseData";
 import FilterByYear from "./FilterByYear";
 
-
 function Expenses(props) {
 
   return (
@@ -13,7 +12,7 @@ function Expenses(props) {
         <ExpenseData
           key={element.Id}
           itemName={element.Item}
-          price={element.price}
+          price={element.Price}
           date={element.Date}
         />
       ))}

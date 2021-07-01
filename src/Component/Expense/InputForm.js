@@ -25,7 +25,7 @@ const InputForm = (props) => {
 
       const ExpenseData = {
           Item : Item,
-          price : Price,
+          Price : Price,
           Date : new Date(IDate)
       };
       props.onExpenseEntry(ExpenseData);

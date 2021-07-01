@@ -24,9 +24,9 @@ const InputForm = (props) => {
       event.preventDefault();
 
       const ExpenseData = {
-          itemTitle : Item,
-          itemPrice : Price,
-          itemDate : new Date(IDate)
+          Item : Item,
+          price : Price,
+          Date : new Date(IDate)
       };
       props.onExpenseEntry(ExpenseData);
       SetItem('Enter Item');

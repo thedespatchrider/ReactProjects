@@ -5,7 +5,7 @@ const NewExpense = (props) => {
   const ExpenseDataRcvr = (expenseDataFromFrm) => {
     const expenseData = {
       ...expenseDataFromFrm,
-      id: Math.random().toString()
+      Id: Math.random().toString()
     };
     //console.log(expenseData);
     props.onNewExpenseEntry(expenseData);

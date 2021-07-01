@@ -8,10 +8,9 @@ function Expenses(props) {
   
 // console.log(updatedExpense);
   return props.addNewExpense.map((element) => {
-    console.log(element.Item);
+    console.log(element.Id);
     if (props.year == element.Date.getFullYear()) {
-      return (
-        
+      return (        
           <ExpenseData
             key={element.Id}
             itemName={element.Item}
@@ -21,6 +20,7 @@ function Expenses(props) {
         
       );
     } else return null;
+    
   });
 }
 

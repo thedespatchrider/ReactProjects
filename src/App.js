@@ -13,7 +13,7 @@ function App() {
   const [newExpense, setNewExpense] = useState('');
   const newExpenseHandler = (newExpenseData) => {
     setNewExpense(newExpenseData);
-    //console.log(newExpenseData.itemTitle);
+    console.log(newExpenseData);
   };
   const yearFilterHandler = (yearFromFilter) => {
     setSelectedYear(yearFromFilter);

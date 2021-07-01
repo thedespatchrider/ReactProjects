@@ -13,26 +13,8 @@ function Expenses(props) {
     { Id: "e6", Item: "Television", price: "45", Date: new Date(2021, 18, 9) },
     { Id: "e7", Item: "Fan", price: "10", Date: new Date(2021, 4, 10) },
   ];
-  let updatedExpense = ''; 
-  //console.log(props.addNewExpense);
-  if (props.addNewExpense.id!=null)
-  {
-  updatedExpense = [
-    ...updatedExpense,
-    ...Expenses,
-    { Id: props.addNewExpense.id, Item: props.addNewExpense.itemTitle, price: props.addNewExpense.itemPrice, Date: props.addNewExpense.itemDate }
-    //props.addNewExpense,
-  ];}
-  else{
-    updatedExpense = [
-      ...updatedExpense,
-      ...Expenses
-      
-      //props.addNewExpense,
-    ];
-  }
- console.log(updatedExpense);
-  return updatedExpense.map((element) => {
+ 
+  return Expenses.map((element) => {
     if (props.year == element.Date.getFullYear()) {
       return (
         <div key={element.Id}>

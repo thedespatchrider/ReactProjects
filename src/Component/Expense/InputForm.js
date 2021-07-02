@@ -3,35 +3,35 @@ import "./InputForm.css";
 
 const InputForm = (props) => {
   const [Item, SetItem] = useState("Enter Item");
-  const [IDate, SetDate] = useState('2021-06-29');
-  const [Price, SetPrice] = useState('0');
+  const [IDate, SetDate] = useState("2021-06-29");
+  const [Price, SetPrice] = useState("0");
   const OnChangeItemHandler = (event) => {
     SetItem(event.target.value);
-    console.log(event.target.value);
+    // console.log(event.target.value);
   };
 
   const OnChangeDateHandler = (event) => {
     SetDate(event.target.value);
-    console.log(event.target.value);
+    // console.log(event.target.value);
   };
 
   const OnChangePriceHandler = (event) => {
     SetPrice(event.target.value);
-    console.log(event.target.value);
+    // console.log(event.target.value);
   };
 
   const expenseSubmitHandler = (event) => {
-      event.preventDefault();
+    event.preventDefault();
 
-      const ExpenseData = {
-          Item : Item,
-          Price : Price,
-          Date : new Date(IDate)
-      };
-      props.onExpenseEntry(ExpenseData);
-      SetItem('Enter Item');
-      SetDate('');
-      SetPrice('0');
+    const ExpenseData = {
+      Item: Item,
+      Price: Price,
+      Date: new Date(IDate),
+    };
+    props.onExpenseEntry(ExpenseData);
+    SetItem("Enter Item");
+    SetDate("");
+    SetPrice("0");
   };
 
   return (

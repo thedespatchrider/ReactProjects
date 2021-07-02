@@ -23,10 +23,16 @@ function App() {
   );
 
   const [newExpense, setNewExpense] = useState(DUMMY_EXPENSE);
+  //let filteredExpense = newExpense;
+  const filteredExpense = newExpense.filter((element) => {
+    return element.Date.getFullYear().toString() === selectedYear;
+  });
+
   const newExpenseHandler = (newExpenseData) => {
     setNewExpense((prevState) => [newExpenseData, ...prevState]);
-    console.log(newExpense);
+    //console.log(newExpense);
   };
+
   const yearFilterHandler = (yearFromFilter) => {
     setSelectedYear(yearFromFilter);
   };
@@ -45,7 +51,7 @@ function App() {
             defaultSelected={selectedYear}
             onSelectYear={yearFilterHandler}
           />
-          <Expenses year={selectedYear} addNewExpense={newExpense} />
+          <Expenses year={selectedYear} addNewExpense={filteredExpense} />
         </Card>
       </div>
     </div>

@@ -2,9 +2,8 @@ import ExpenseData from "./ExpenseData";
 import FilterByYear from "./FilterByYear";
 
 function Expenses(props) {
-  let filteredExpense;
-  filteredExpense = props.addNewExpense.filter((element) => {
-    return element.Date.getFullYear() == props.year;
+  const filteredExpense = props.addNewExpense.filter((element) => {
+    return element.Date.getFullYear().toString() === props.year;
   });
 
   return (
